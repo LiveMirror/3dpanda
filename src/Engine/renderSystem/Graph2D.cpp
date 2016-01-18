@@ -194,7 +194,7 @@ namespace panda
 		else
 		{
 			f32 add = (lineWidth - 1) / 2;
-			DrawLine(x - add, y, x + width + add, y, color, lineWidth);
+			DrawLine((s32)x - add, y, x + width + add, y, color, lineWidth);
 			DrawLine(x + width, y - add, x + width, y + height + add, color, lineWidth);
 			DrawLine(x + width + add, y + height, x - add, y + height, color, lineWidth);
 			DrawLine(x, y + height + add, x, y - add, color, lineWidth);

@@ -43,9 +43,9 @@ namespace panda
 	void ToolBarButtonItemImpl::OnRender( IGraph2D* graph )
 	{
 		Color c = mBackColor;
-		c.A *= mAniAlpha;
+		c.A = (u8)(c.A * mAniAlpha);
 		Color c2 = mBackColor2;
-		c2.A *= mAniAlpha;
+		c2.A = (u8)(c2.A * mAniAlpha);
 		graph->FillRect(0, 0, mRect.size.width, mRect.size.height, c, c2);
 		
 		if(!mBackImage.IsNull())
@@ -69,7 +69,7 @@ namespace panda
 		}
 		
 		c = mBorderColor;
-		c.A *= mAniAlpha;
+		c.A = (u8)(c.A * mAniAlpha);
 		graph->DrawRect(0, 0, mRect.size.width, mRect.size.height, c);
 	}
 
@@ -184,9 +184,9 @@ namespace panda
 			graph->DrawRect(1, 1, mRect.size.width - 2, mRect.size.height - 2, mBorderColor);
 		}
 		Color c = mBackColor;
-		c.A *= mAniAlpha;
+		c.A = (u8)(c.A * mAniAlpha);
 		Color c2 = mBackColor2;
-		c2.A *= mAniAlpha;
+		c2.A = (u8)(c2.A * mAniAlpha);
 		graph->FillRect(0, 0, mRect.size.width, mRect.size.height, c, c2);
 
 		if(!mBackImage.IsNull())
@@ -210,7 +210,7 @@ namespace panda
 		}
 
 		c = mBorderColor;
-		c.A *= mAniAlpha;
+		c.A = (u8)(c.A * mAniAlpha);
 		graph->DrawRect(0, 0, mRect.size.width, mRect.size.height, c);
 	}
 }

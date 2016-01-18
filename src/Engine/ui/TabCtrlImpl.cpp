@@ -22,11 +22,11 @@ namespace panda
 		page->SetSize(mRect.size.width, mRect.size.height - mTitleHeight);
 		AddChild(page);
 
-		mPageTitleWidth = mRect.size.width;
+		mPageTitleWidth = (f32)mRect.size.width;
 		mPageTitleWidth /= mChilds.size();
 		if(mPageTitleWidth > mMaxPageTitleWidth)
 		{
-			mPageTitleWidth = mMaxPageTitleWidth;
+			mPageTitleWidth = (f32)mMaxPageTitleWidth;
 		}
 
 		return page;
@@ -70,16 +70,16 @@ namespace panda
 		{
 			if(i == mSelectIndex)
 			{
-				graph->FillRect(x, 0, mPageTitleWidth, mTitleHeight, mBorderColor);
+				graph->FillRect(x, 0, (s32)mPageTitleWidth, mTitleHeight, mBorderColor);
 			}
 			else if(i == mMouseOnIndex)
 			{
-				graph->FillRect(x, 0, mPageTitleWidth, mTitleHeight, mBackColor2);
+				graph->FillRect(x, 0, (s32)mPageTitleWidth, mTitleHeight, mBackColor2);
 			}
-			graph->DrawString(mFont, x + 3, 0, mPageTitleWidth - 6, mTitleHeight, mChilds[i]->mImpl->mText, 
+			graph->DrawString(mFont, x + 3, 0, (s32)mPageTitleWidth - 6, mTitleHeight, mChilds[i]->mImpl->mText, 
 				mTextColor, FontFormat::CENTER | FontFormat::VCENTER/* | FontFormat::WORD_ELLIPSIS*/);
 
-			x += mPageTitleWidth;
+			x += (s32)mPageTitleWidth;
 		}
 
 		graph->DrawLine(0, mTitleHeight, mRect.size.width, mTitleHeight, mBorderColor);
@@ -125,7 +125,7 @@ namespace panda
 	{
 		if(e.y <= mTitleHeight)
 		{
-			u32 index = e.x / mPageTitleWidth;
+			u32 index = (u32)(e.x / mPageTitleWidth);
 			if(mSelectIndex != index && index < mChilds.size())
 			{
 				mSelectIndex = index;
@@ -138,7 +138,7 @@ namespace panda
 	{
 		if(e.y <= mTitleHeight)
 		{
-			u32 index =  e.x / mPageTitleWidth;
+			u32 index =  (u32)(e.x / mPageTitleWidth);
 			if(mMouseOnIndex != index && index < mChilds.size())
 			{
 				mMouseOnIndex = index;

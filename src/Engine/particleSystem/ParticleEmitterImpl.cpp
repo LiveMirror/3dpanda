@@ -28,7 +28,7 @@ namespace panda
 
 	void ParticleEmitterImpl::Emit( ParticleList& pattilces, f32 time)
 	{
-		s32 count = mRate * (time + mYuTime);
+		s32 count = (s32)(mRate * (time + mYuTime));
 		f32 passTime = (f32)count / mRate;
 		mYuTime = time + mYuTime - passTime;
 		for(s32 i = 0; i < count; i++)
@@ -37,7 +37,7 @@ namespace panda
 			p->mCreater = mThis;
 
 			// 方向
-			f32 a = rand() % mAngle;
+			f32 a = (f32)(rand() % mAngle);
 			p->mDirection = mDirection.RandomDeviant(3.14f * a / 180.0f);
 
 			// 速度

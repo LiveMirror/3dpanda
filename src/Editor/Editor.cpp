@@ -29,7 +29,6 @@ namespace editor
 	{
 		mEngine = TheEngine();
 		RenderWindowParam param;
-		//param.bBoder = false;
 		param.strTitle = _T("Game Editor");
 		IRenderWindow* pWindow = mEngine->InitDevice(&param);
 

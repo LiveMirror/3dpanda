@@ -145,7 +145,7 @@ namespace panda
 			f32* test = (f32*)buf->LockBuffer();
 			file.Write(test, len);
 			int size = buf->mVertexSize / 4;
-			for(int n = 0; n < num; n++)
+			for(u32 n = 0; n < num; n++)
 			{
 				uv.push_back(test[size * n + 6]);
 				uv.push_back(test[size * n + 7]);
