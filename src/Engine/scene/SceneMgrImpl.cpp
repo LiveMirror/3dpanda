@@ -10,6 +10,7 @@
 #include "scene/IParticleObject.h"
 //#include "scene/ipointlight.h"
 
+
 namespace panda
 {
 	SceneMgrImpl::SceneMgrImpl( ISceneMgr* pThis )

@@ -104,7 +104,7 @@ namespace panda
 
 			D3DPERF_BeginEvent(0, _T("UI"));
 			// äÖÈ¾UI
-			mUiManager->Render(mRenderSys->GetGraph2D(), mTimer.GetTickTime());
+			mUiManager->Render(mRenderSys->GetGraph2D(), (s32)mTimer.GetTickTime());
 			
 			D3DPERF_EndEvent();
 

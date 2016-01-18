@@ -33,7 +33,8 @@
 
 namespace panda
 {
-	ResourceMgr::ResourceMgr( void )
+	ResourceMgr::ResourceMgr(void)
+		:mResCreateCount(0)
 	{
 
 	}

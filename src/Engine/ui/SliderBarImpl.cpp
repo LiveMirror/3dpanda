@@ -18,7 +18,7 @@ namespace panda
 
 	void SliderBarImpl::OnRender( IGraph2D* graph )
 	{
-		s32 x = mValue * mPerWidth;
+		s32 x = (s32)(mValue * mPerWidth);
 		s32 h = mRect.size.height;
 		graph->FillRect(0, 1, mRect.size.width, h - 2, 0x5f000000);
 		graph->DrawRect(0, 1, mRect.size.width, h - 2, 0x5f565656);
@@ -39,7 +39,7 @@ namespace panda
 		if(mMouseOn)
 		{
 			Color temp = mBorderColor;
-			temp.A *= 0.5f;
+			temp.A = (u8)(temp.A * 0.5f);
 			graph->DrawRect(x, 0 , mBarWidth, h, temp, 2);
 		}
 	}
@@ -96,7 +96,7 @@ namespace panda
 			s32 vw = e.x - mMouseDownX;
 			if(math::absValue(vw) >= mPerWidth)
 			{
-				s32 v = vw / mPerWidth;
+				s32 v = (s32)(vw / mPerWidth);
 				s32 temp = mValue + v;
 				if(temp < 0)
 				{
@@ -109,7 +109,7 @@ namespace panda
 				if(temp != mValue)
 				{
 					mValue = temp;
-					mMouseDownX = mValue * mPerWidth + mBarWidth / 2;
+					mMouseDownX = (s32)(mValue * mPerWidth + mBarWidth / 2);
 					mOnValueChange(mThis);
 				}
 			}
@@ -137,7 +137,7 @@ namespace panda
 
 	void SliderBarImpl::_DrawTags( IGraph2D* graph )
 	{
-		s32 x, y;
+		s32 x;
 		SliderBarTag* tag;
 		TagList::iterator it = mTags.begin();
 		while(it != mTags.end())

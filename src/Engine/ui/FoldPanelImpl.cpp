@@ -121,7 +121,7 @@ namespace panda
 			s32 y = mRect.size.height - e.y;
 			u32 count = y / mTitleHeight;
 			s32 index = mChilds.size() - count - 1;
-			if(mMouseOnIndex != index && index < mChilds.size())
+			if(mMouseOnIndex != index && index < (s32)mChilds.size())
 			{
 				mMouseOnIndex = index;
 			}

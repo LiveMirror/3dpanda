@@ -42,7 +42,7 @@ namespace panda
 		if(mMouseOn)
 		{
 			Color temp = mBorderColor;
-			temp.A *= 0.5f;
+			temp.A *= (u8)0.5f;
 			graph->DrawRect(0, 0, mRect.size.width, mRect.size.height, temp, 2);
 		}
 	}
@@ -137,7 +137,7 @@ namespace panda
 					OnTextChange();
 					CalculateCursorPos();
 				}
-				else if(mCursorIndex < mText.size())
+				else if(mCursorIndex < (s32)mText.size())
 				{
 					mText.erase(mCursorIndex, 1);
 					OnTextChange();
@@ -147,7 +147,7 @@ namespace panda
 			}
 		case VK_RIGHT:
 			{
-				if(mCursorIndex < mText.size())
+				if(mCursorIndex < (s32)mText.size())
 				{
 					mCursorIndex++;
 					CalculateCursorPos();
@@ -174,7 +174,7 @@ namespace panda
 			}
 		case VK_END:
 			{
-				if(mCursorIndex != mText.size())
+				if(mCursorIndex != (s32)mText.size())
 				{
 					mCursorIndex = mText.size();
 					CalculateCursorPos();

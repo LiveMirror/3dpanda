@@ -41,7 +41,9 @@ namespace panda
 
 		void					SetPass(IPass* pass);
 
+		// 创建顶点shader
 		IDirect3DVertexShader9*	CreateVertexShader(const char* src, u32 len, const char* mainFunName, IPass* refPass);
+		// 创建像素shader
 		IDirect3DPixelShader9*	CreatePixelShader(const char* src, u32 len, const char* mainFunName, IPass* refPass);
 
 		void					SetVertexBuffer(VertexData* pData);
