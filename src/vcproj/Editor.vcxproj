@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0CBD4C8F-0BAE-488D-87F9-9F5FCC2A7228}</ProjectGuid>
+    <RootNamespace>Editor</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)../../bin/$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../temp/$(Configuration)/$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)../../bin/$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../temp/$(Configuration)/$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../include/core;$(SolutionDir)../../include/engine;$(SolutionDir)../../include/game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../include/core;$(SolutionDir)../../include/engine;$(SolutionDir)../../include/game;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Editor\IAttrPage.cpp" />
+    <ClCompile Include="..\Editor\PropertyPage.cpp" />
+    <ClCompile Include="..\Editor\ResView\EffectView.cpp" />
+    <ClCompile Include="..\Editor\ResView\MatView.cpp" />
+    <ClCompile Include="..\Editor\ResView\MeshView.cpp" />
+    <ClCompile Include="..\Editor\ResView\ResPage.cpp" />
+    <ClCompile Include="..\Editor\ResView\ResView.cpp" />
+    <ClCompile Include="..\Editor\SceneView\DlgBlendMat.cpp" />
+    <ClCompile Include="..\Editor\DlgTerInfo.cpp" />
+    <ClCompile Include="..\Editor\SceneView\EntityView.cpp" />
+    <ClCompile Include="..\Editor\ScenePage.cpp" />
+    <ClCompile Include="..\Editor\SceneView\SceneView.cpp" />
+    <ClCompile Include="..\Editor\SceneView\TerView.cpp" />
+    <ClCompile Include="..\Editor\SceneView\FlatBrush.cpp" />
+    <ClCompile Include="..\Editor\SceneView\HeightBrush.cpp" />
+    <ClCompile Include="..\Editor\SceneView\IBrush.cpp" />
+    <ClCompile Include="..\Editor\SceneView\SmoothBrush.cpp" />
+    <ClCompile Include="..\Editor\SceneView\TextureBrush.cpp" />
+    <ClCompile Include="..\Editor\DlgChooseRes.cpp" />
+    <ClCompile Include="..\Editor\ResCenter.cpp" />
+    <ClCompile Include="..\Editor\DlgCameraSet.cpp" />
+    <ClCompile Include="..\Editor\DlgEvnSet.cpp" />
+    <ClCompile Include="..\Editor\DlgRenderSet.cpp" />
+    <ClCompile Include="..\Editor\DlgInput.cpp" />
+    <ClCompile Include="..\Editor\Editor.cpp" />
+    <ClCompile Include="..\Editor\FrameUI.cpp" />
+    <ClCompile Include="..\Editor\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Editor\IAttrPage.h" />
+    <ClInclude Include="..\Editor\PropertyPage.h" />
+    <ClInclude Include="..\Editor\ResView\EffectView.h" />
+    <ClInclude Include="..\Editor\ResView\MatView.h" />
+    <ClInclude Include="..\Editor\ResView\MeshView.h" />
+    <ClInclude Include="..\Editor\ResView\ResPage.h" />
+    <ClInclude Include="..\Editor\ResView\ResView.h" />
+    <ClInclude Include="..\Editor\SceneView\DlgBlendMat.h" />
+    <ClInclude Include="..\Editor\DlgTerInfo.h" />
+    <ClInclude Include="..\Editor\SceneView\EntityView.h" />
+    <ClInclude Include="..\Editor\ScenePage.h" />
+    <ClInclude Include="..\Editor\SceneView\SceneView.h" />
+    <ClInclude Include="..\Editor\SceneView\TerView.h" />
+    <ClInclude Include="..\Editor\SceneView\FlatBrush.h" />
+    <ClInclude Include="..\Editor\SceneView\HeightBrush.h" />
+    <ClInclude Include="..\Editor\SceneView\IBrush.h" />
+    <ClInclude Include="..\Editor\SceneView\SmoothBrush.h" />
+    <ClInclude Include="..\Editor\SceneView\TextureBrush.h" />
+    <ClInclude Include="..\Editor\DlgChooseRes.h" />
+    <ClInclude Include="..\Editor\ResCenter.h" />
+    <ClInclude Include="..\Editor\DlgCameraSet.h" />
+    <ClInclude Include="..\Editor\DlgEvnSet.h" />
+    <ClInclude Include="..\Editor\DlgRenderSet.h" />
+    <ClInclude Include="..\Editor\DlgInput.h" />
+    <ClInclude Include="..\Editor\Editor.h" />
+    <ClInclude Include="..\Editor\EditorDef.h" />
+    <ClInclude Include="..\Editor\FrameUI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Core.vcxproj">
+      <Project>{30d29792-6049-4a21-a367-d4dd8a1423a8}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Engine.vcxproj">
+      <Project>{87ebdc71-f594-4eee-b51e-8b5f1c02d787}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="Game.vcxproj">
+      <Project>{cca38e71-26f5-4315-8b55-57a7674e6a78}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

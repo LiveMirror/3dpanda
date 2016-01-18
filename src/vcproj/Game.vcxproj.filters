@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{e88965ff-595d-4e2f-adad-2096eef8d3af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Serialize">
+      <UniqueIdentifier>{5d4c46e4-f85b-4e02-8284-08b4f3efa6ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\Deserialize">
+      <UniqueIdentifier>{cd9ceda0-312a-4eb0-94f7-2b982f123c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{e3f972dd-312a-4680-b8f3-b6435abc739f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\game\IGame.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\game\ILevel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\game\Serialize\ISerialize.h">
+      <Filter>include\Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\game\Deserialize\IDeserialize.h">
+      <Filter>include\Deserialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Game.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Game\Level.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Game\Game.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Game\Level.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

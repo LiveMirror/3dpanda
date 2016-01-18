@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AttriPage">
+      <UniqueIdentifier>{a954a5e9-861f-4453-a93c-d6bbca850a88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AttriPage\ResView">
+      <UniqueIdentifier>{847b5018-15be-4367-8a1c-74cc23a522e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AttriPage\SceneView">
+      <UniqueIdentifier>{3da9f1a2-a4b2-4514-a28b-96e3f3449089}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AttriPage\SceneView\Brush">
+      <UniqueIdentifier>{a5a63b93-f4c9-47ed-a948-2aa78f765323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ResCenter">
+      <UniqueIdentifier>{92c71e44-b539-46ba-89b5-4e355a7a4933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToolBar">
+      <UniqueIdentifier>{3b799db1-e9fd-4db4-b96f-2b9031cbd285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BaseTool">
+      <UniqueIdentifier>{741656c7-1225-40da-a95f-6d12bfbdb12c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Editor\IAttrPage.cpp">
+      <Filter>AttriPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\PropertyPage.cpp">
+      <Filter>AttriPage</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResView\EffectView.cpp">
+      <Filter>AttriPage\ResView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResView\MatView.cpp">
+      <Filter>AttriPage\ResView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResView\MeshView.cpp">
+      <Filter>AttriPage\ResView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResView\ResPage.cpp">
+      <Filter>AttriPage\ResView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResView\ResView.cpp">
+      <Filter>AttriPage\ResView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\DlgBlendMat.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgTerInfo.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\EntityView.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ScenePage.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\SceneView.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\TerView.cpp">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\FlatBrush.cpp">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\HeightBrush.cpp">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\IBrush.cpp">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\SmoothBrush.cpp">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\SceneView\TextureBrush.cpp">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgChooseRes.cpp">
+      <Filter>ResCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\ResCenter.cpp">
+      <Filter>ResCenter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgCameraSet.cpp">
+      <Filter>ToolBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgEvnSet.cpp">
+      <Filter>ToolBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgRenderSet.cpp">
+      <Filter>ToolBar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\DlgInput.cpp">
+      <Filter>BaseTool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Editor\Editor.cpp" />
+    <ClCompile Include="..\Editor\FrameUI.cpp" />
+    <ClCompile Include="..\Editor\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Editor\IAttrPage.h">
+      <Filter>AttriPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\PropertyPage.h">
+      <Filter>AttriPage</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResView\EffectView.h">
+      <Filter>AttriPage\ResView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResView\MatView.h">
+      <Filter>AttriPage\ResView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResView\MeshView.h">
+      <Filter>AttriPage\ResView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResView\ResPage.h">
+      <Filter>AttriPage\ResView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResView\ResView.h">
+      <Filter>AttriPage\ResView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\DlgBlendMat.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgTerInfo.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\EntityView.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ScenePage.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\SceneView.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\TerView.h">
+      <Filter>AttriPage\SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\FlatBrush.h">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\HeightBrush.h">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\IBrush.h">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\SmoothBrush.h">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\SceneView\TextureBrush.h">
+      <Filter>AttriPage\SceneView\Brush</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgChooseRes.h">
+      <Filter>ResCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\ResCenter.h">
+      <Filter>ResCenter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgCameraSet.h">
+      <Filter>ToolBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgEvnSet.h">
+      <Filter>ToolBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgRenderSet.h">
+      <Filter>ToolBar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\DlgInput.h">
+      <Filter>BaseTool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Editor\Editor.h" />
+    <ClInclude Include="..\Editor\EditorDef.h" />
+    <ClInclude Include="..\Editor\FrameUI.h" />
+  </ItemGroup>
+</Project>

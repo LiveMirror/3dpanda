@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{87EBDC71-F594-4EEE-B51E-8B5F1C02D787}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)../../bin/$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../temp/$(Configuration)/$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (March 2008)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28March 2008%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)../../bin/$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)../../temp/$(Configuration)/$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (March 2008)\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28March 2008%29\Lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../include/core;$(SolutionDir)../../include/engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3dx9.lib;d3d9.lib;dinput8.lib;PandaCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(SolutionName)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../../include/core;$(SolutionDir)../../include/engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3dx9.lib;d3d9.lib;dinput8.lib;PandaCore.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(SolutionName)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>$(SolutionDir)../../bin/$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\engine\IPanda.h" />
+    <ClInclude Include="..\..\include\engine\base\AABBOX.h" />
+    <ClInclude Include="..\..\include\engine\base\Color.h" />
+    <ClInclude Include="..\..\include\engine\base\Config.h" />
+    <ClInclude Include="..\..\include\engine\base\Line.h" />
+    <ClInclude Include="..\..\include\engine\base\Math.h" />
+    <ClInclude Include="..\..\include\engine\base\Matrix44.h" />
+    <ClInclude Include="..\..\include\engine\base\Plane.h" />
+    <ClInclude Include="..\..\include\engine\base\Quaternion.h" />
+    <ClInclude Include="..\..\include\engine\base\Ray.h" />
+    <ClInclude Include="..\..\include\engine\base\Rect.h" />
+    <ClInclude Include="..\..\include\engine\base\Size.h" />
+    <ClInclude Include="..\..\include\engine\base\Struct.h" />
+    <ClInclude Include="..\..\include\engine\base\Vector2D.h" />
+    <ClInclude Include="..\..\include\engine\base\Vector3D.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\IGraph2D.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\IPass.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderSystem.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderTarget.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderWindow.h" />
+    <ClInclude Include="..\..\include\engine\renderSystem\ITechnique.h" />
+    <ClInclude Include="..\..\include\engine\resources\IMaterial.h" />
+    <ClInclude Include="..\..\include\engine\resources\IParticleSys.h" />
+    <ClInclude Include="..\..\include\engine\resources\IResMesh.h" />
+    <ClInclude Include="..\..\include\engine\resources\IResMgr.h" />
+    <ClInclude Include="..\..\include\engine\resources\IResource.h" />
+    <ClInclude Include="..\..\include\engine\resources\IResSkeleton.h" />
+    <ClInclude Include="..\..\include\engine\resources\IResTerrain.h" />
+    <ClInclude Include="..\..\include\engine\resources\ITerrainMaterial.h" />
+    <ClInclude Include="..\..\include\engine\resources\ITexture.h" />
+    <ClInclude Include="..\..\include\engine\resources\ResRefDefine.h" />
+    <ClInclude Include="..\..\include\engine\ui\CtrlDef.h" />
+    <ClInclude Include="..\..\include\engine\ui\IButton.h" />
+    <ClInclude Include="..\..\include\engine\ui\ICheckBox.h" />
+    <ClInclude Include="..\..\include\engine\ui\IComboBox.h" />
+    <ClInclude Include="..\..\include\engine\ui\IControl.h" />
+    <ClInclude Include="..\..\include\engine\ui\IDialog.h" />
+    <ClInclude Include="..\..\include\engine\ui\IFoldPanel.h" />
+    <ClInclude Include="..\..\include\engine\ui\IFont.h" />
+    <ClInclude Include="..\..\include\engine\ui\ILabel.h" />
+    <ClInclude Include="..\..\include\engine\ui\IListBox.h" />
+    <ClInclude Include="..\..\include\engine\ui\IListView.h" />
+    <ClInclude Include="..\..\include\engine\ui\IMenu.h" />
+    <ClInclude Include="..\..\include\engine\ui\IPanel.h" />
+    <ClInclude Include="..\..\include\engine\ui\IPictureBox.h" />
+    <ClInclude Include="..\..\include\engine\ui\IProgressBar.h" />
+    <ClInclude Include="..\..\include\engine\ui\IPropertyGrid.h" />
+    <ClInclude Include="..\..\include\engine\ui\IRadioButton.h" />
+    <ClInclude Include="..\..\include\engine\ui\IScrollBar.h" />
+    <ClInclude Include="..\..\include\engine\ui\ISliderBar.h" />
+    <ClInclude Include="..\..\include\engine\ui\ITabCtrl.h" />
+    <ClInclude Include="..\..\include\engine\ui\ITextBox.h" />
+    <ClInclude Include="..\..\include\engine\ui\IToolBar.h" />
+    <ClInclude Include="..\..\include\engine\ui\ITreeView.h" />
+    <ClInclude Include="..\..\include\engine\ui\IUiInput.h" />
+    <ClInclude Include="..\..\include\engine\ui\IUiManager.h" />
+    <ClInclude Include="..\..\include\engine\ui\PropertyGridDefine.h" />
+    <ClInclude Include="..\..\include\engine\scene\IBillboardObject.h" />
+    <ClInclude Include="..\..\include\engine\scene\IBone.h" />
+    <ClInclude Include="..\..\include\engine\scene\ICamera.h" />
+    <ClInclude Include="..\..\include\engine\scene\IMeshObject.h" />
+    <ClInclude Include="..\..\include\engine\scene\INode.h" />
+    <ClInclude Include="..\..\include\engine\scene\IParticleObject.h" />
+    <ClInclude Include="..\..\include\engine\scene\ISceneMgr.h" />
+    <ClInclude Include="..\..\include\engine\scene\ISceneNode.h" />
+    <ClInclude Include="..\..\include\engine\scene\ISceneObject.h" />
+    <ClInclude Include="..\..\include\engine\animation\IAnimation.h" />
+    <ClInclude Include="..\..\include\engine\animation\IAnimationController.h" />
+    <ClInclude Include="..\..\include\engine\animation\IAnimationEntity.h" />
+    <ClInclude Include="..\..\include\engine\animation\IAnimationTrack.h" />
+    <ClInclude Include="..\..\include\engine\animation\IKeyFrame.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleTechnique.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IColourAffector.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\ILinerForceAffector.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleAffector.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleEmitter.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IBillboardRender.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IBoxRender.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleRender.h" />
+    <ClInclude Include="..\..\include\engine\particleSystem\IRibbonTrailRender.h" />
+    <ClInclude Include="..\Engine\Panda.h" />
+    <ClInclude Include="..\Engine\TypeDef.h" />
+    <ClInclude Include="..\Engine\renderSystem\Graph2D.h" />
+    <ClInclude Include="..\Engine\renderSystem\Graph3D.h" />
+    <ClInclude Include="..\Engine\renderSystem\Renderable.h" />
+    <ClInclude Include="..\Engine\renderSystem\RenderableSet.h" />
+    <ClInclude Include="..\Engine\renderSystem\RenderQueue.h" />
+    <ClInclude Include="..\Engine\renderSystem\RenderSystem.h" />
+    <ClInclude Include="..\Engine\renderSystem\RenderTargetImpl.h" />
+    <ClInclude Include="..\Engine\renderSystem\RenderWindow.h" />
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\CircleEffect.h" />
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\Effect2D.h" />
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\ImageEffect.h" />
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\RectEffect.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\Effect.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\EffectSetPass.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\LinePass.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\Pass.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\PassMgr.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\PostProcessPass.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\SknPass.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\TechniqueImpl.h" />
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\TerPass.h" />
+    <ClInclude Include="..\Engine\ui\Font.h" />
+    <ClInclude Include="..\Engine\ui\SliderBarTag.h" />
+    <ClInclude Include="..\Engine\ui\uiManager.h" />
+    <ClInclude Include="..\Engine\ui\ButtonImpl.h" />
+    <ClInclude Include="..\Engine\ui\CheckBoxImpl.h" />
+    <ClInclude Include="..\Engine\ui\ComboBoxImpl.h" />
+    <ClInclude Include="..\Engine\ui\ControlImpl.h" />
+    <ClInclude Include="..\Engine\ui\DialogImpl.h" />
+    <ClInclude Include="..\Engine\ui\FoldPageImpl.h" />
+    <ClInclude Include="..\Engine\ui\FoldPanelImpl.h" />
+    <ClInclude Include="..\Engine\ui\LabelImpl.h" />
+    <ClInclude Include="..\Engine\ui\ListBoxImpl.h" />
+    <ClInclude Include="..\Engine\ui\ListBoxItemImpl.h" />
+    <ClInclude Include="..\Engine\ui\ListViewImpl.h" />
+    <ClInclude Include="..\Engine\ui\ListViewItemImpl.h" />
+    <ClInclude Include="..\Engine\ui\MenuImpl.h" />
+    <ClInclude Include="..\Engine\ui\MenuItemImpl.h" />
+    <ClInclude Include="..\Engine\ui\PanelImpl.h" />
+    <ClInclude Include="..\Engine\ui\PictureBoxImpl.h" />
+    <ClInclude Include="..\Engine\ui\ProgressBarImpl.h" />
+    <ClInclude Include="..\Engine\ui\PropertyGridImpl.h" />
+    <ClInclude Include="..\Engine\ui\PropertyGridItemImpl.h" />
+    <ClInclude Include="..\Engine\ui\RadioButtonImpl.h" />
+    <ClInclude Include="..\Engine\ui\ScrollBarImpl.h" />
+    <ClInclude Include="..\Engine\ui\SliderBarImpl.h" />
+    <ClInclude Include="..\Engine\ui\TabCtrlImpl.h" />
+    <ClInclude Include="..\Engine\ui\TabPageImpl.h" />
+    <ClInclude Include="..\Engine\ui\TextBoxImpl.h" />
+    <ClInclude Include="..\Engine\ui\ToolBarImpl.h" />
+    <ClInclude Include="..\Engine\ui\ToolBarItemImpl.h" />
+    <ClInclude Include="..\Engine\ui\ToolTipImpl.h" />
+    <ClInclude Include="..\Engine\ui\TreeViewImpl.h" />
+    <ClInclude Include="..\Engine\ui\TreeViewItemImpl.h" />
+    <ClInclude Include="..\Engine\io\Timer.h" />
+    <ClInclude Include="..\Engine\resource\IndexData.h" />
+    <ClInclude Include="..\Engine\resource\ResourceMgr.h" />
+    <ClInclude Include="..\Engine\resource\SubMesh.h" />
+    <ClInclude Include="..\Engine\resource\VertexData.h" />
+    <ClInclude Include="..\Engine\resource\MaterialImpl.h" />
+    <ClInclude Include="..\Engine\resource\ParticleSysImpl.h" />
+    <ClInclude Include="..\Engine\resource\ResMeshImpl.h" />
+    <ClInclude Include="..\Engine\resource\ResourceImpl.h" />
+    <ClInclude Include="..\Engine\resource\ResSkeletonImpl.h" />
+    <ClInclude Include="..\Engine\resource\ResTerrainImpl.h" />
+    <ClInclude Include="..\Engine\resource\TerrainMaterialImpl.h" />
+    <ClInclude Include="..\Engine\resource\TextureImpl.h" />
+    <ClInclude Include="..\Engine\resource\MeshSerialize\hyMeshSerialize.h" />
+    <ClInclude Include="..\Engine\resource\MeshSerialize\MeshSerialize.h" />
+    <ClInclude Include="..\Engine\resource\MeshSerialize\OgreMeshSerialize.h" />
+    <ClInclude Include="..\Engine\resource\MeshSerialize\SerializeHelper.h" />
+    <ClInclude Include="..\Engine\resource\MaterialSerialize\MaterialSerialize.h" />
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\hySkeletonSerialize.h" />
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\OgreSkeletonSerialize.h" />
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\SkeletonSerialize.h" />
+    <ClInclude Include="..\Engine\scene\Billboard.h" />
+    <ClInclude Include="..\Engine\scene\BillboardObjectImpl.h" />
+    <ClInclude Include="..\Engine\scene\BoneImpl.h" />
+    <ClInclude Include="..\Engine\scene\CameraImpl.h" />
+    <ClInclude Include="..\Engine\scene\MeshObjectImpl.h" />
+    <ClInclude Include="..\Engine\scene\NodeImpl.h" />
+    <ClInclude Include="..\Engine\scene\ParticleObjectImpl.h" />
+    <ClInclude Include="..\Engine\scene\SceneMgrImpl.h" />
+    <ClInclude Include="..\Engine\scene\SceneNodeImpl.h" />
+    <ClInclude Include="..\Engine\scene\SceneObjectImpl.h" />
+    <ClInclude Include="..\Engine\scene\SubMeshObject.h" />
+    <ClInclude Include="..\Engine\animation\Animation.h" />
+    <ClInclude Include="..\Engine\animation\AnimationController.h" />
+    <ClInclude Include="..\Engine\animation\AnimationEntity.h" />
+    <ClInclude Include="..\Engine\animation\AnimationTrackImpl.h" />
+    <ClInclude Include="..\Engine\animation\AniObject.h" />
+    <ClInclude Include="..\Engine\animation\KeyFrameImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\Particle.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleController.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleFactory.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleRenderableSet.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleTechnique.h" />
+    <ClInclude Include="..\Engine\particleSystem\BillboardRenderImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleRenderImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleEmitterImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\ColourAffectorImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\LinerForceAffectorImpl.h" />
+    <ClInclude Include="..\Engine\particleSystem\ParticleAffectorImpl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Engine\Panda.cpp" />
+    <ClCompile Include="..\Engine\Static.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\Graph2D.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\Graph3D.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\IRenderTarget.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\Renderable.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\RenderableSet.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\RenderQueue.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\RenderSystem.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\RenderTargetImpl.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\RenderWindow.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\CircleEffect.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\Effect2D.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\ImageEffect.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\RectEffect.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\Effect.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\EffectSetPass.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\ITechnique.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\LinePass.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\Pass.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\PassMgr.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\PostProcessPass.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\SknPass.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\TechniqueImpl.cpp" />
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\TerPass.cpp" />
+    <ClCompile Include="..\Engine\ui\Font.cpp" />
+    <ClCompile Include="..\Engine\ui\IButton.cpp" />
+    <ClCompile Include="..\Engine\ui\ICheckBox.cpp" />
+    <ClCompile Include="..\Engine\ui\IComboBox.cpp" />
+    <ClCompile Include="..\Engine\ui\IControl.cpp" />
+    <ClCompile Include="..\Engine\ui\IDialog.cpp" />
+    <ClCompile Include="..\Engine\ui\IFoldPanel.cpp" />
+    <ClCompile Include="..\Engine\ui\ILabel.cpp" />
+    <ClCompile Include="..\Engine\ui\IListBox.cpp" />
+    <ClCompile Include="..\Engine\ui\IListView.cpp" />
+    <ClCompile Include="..\Engine\ui\IMenu.cpp" />
+    <ClCompile Include="..\Engine\ui\IPanel.cpp" />
+    <ClCompile Include="..\Engine\ui\IPictureBox.cpp" />
+    <ClCompile Include="..\Engine\ui\IProgressBar.cpp" />
+    <ClCompile Include="..\Engine\ui\IPropertyGrid.cpp" />
+    <ClCompile Include="..\Engine\ui\IRadioButton.cpp" />
+    <ClCompile Include="..\Engine\ui\IScrollBar.cpp" />
+    <ClCompile Include="..\Engine\ui\ISliderBar.cpp" />
+    <ClCompile Include="..\Engine\ui\ITabCtrl.cpp" />
+    <ClCompile Include="..\Engine\ui\ITextBox.cpp" />
+    <ClCompile Include="..\Engine\ui\IToolBar.cpp" />
+    <ClCompile Include="..\Engine\ui\ITreeView.cpp" />
+    <ClCompile Include="..\Engine\ui\SliderBarTag.cpp" />
+    <ClCompile Include="..\Engine\ui\uiManager.cpp" />
+    <ClCompile Include="..\Engine\ui\ButtonImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\CheckBoxImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ComboBoxImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ControlImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\DialogImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\FoldPageImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\FoldPanelImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\LabelImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ListBoxImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ListBoxItemImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ListViewImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ListViewItemImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\MenuImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\MenuItemImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\PanelImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\PictureBoxImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ProgressBarImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\PropertyGridImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\PropertyGridItemImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\RadioButtonImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ScrollBarImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\SliderBarImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\TabCtrlImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\TabPageImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\TextBoxImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ToolBarImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ToolBarItemImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\ToolTipImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\TreeViewImpl.cpp" />
+    <ClCompile Include="..\Engine\ui\TreeViewItemImpl.cpp" />
+    <ClCompile Include="..\Engine\io\Timer.cpp" />
+    <ClCompile Include="..\Engine\resource\IMaterial.cpp" />
+    <ClCompile Include="..\Engine\resource\IndexData.cpp" />
+    <ClCompile Include="..\Engine\resource\IParticleSys.cpp" />
+    <ClCompile Include="..\Engine\resource\IResMesh.cpp" />
+    <ClCompile Include="..\Engine\resource\IResource.cpp" />
+    <ClCompile Include="..\Engine\resource\IResSkeleton.cpp" />
+    <ClCompile Include="..\Engine\resource\IResTerrain.cpp" />
+    <ClCompile Include="..\Engine\resource\ITerrainMaterial.cpp" />
+    <ClCompile Include="..\Engine\resource\ITexture.cpp" />
+    <ClCompile Include="..\Engine\resource\ResourceMgr.cpp" />
+    <ClCompile Include="..\Engine\resource\SubMesh.cpp" />
+    <ClCompile Include="..\Engine\resource\VertexData.cpp" />
+    <ClCompile Include="..\Engine\resource\MaterialImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\ParticleSysImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\ResMeshImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\ResourceImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\ResSkeletonImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\ResTerrainImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\TerrainMaterialImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\TextureImpl.cpp" />
+    <ClCompile Include="..\Engine\resource\MeshSerialize\hyMeshSerialize.cpp" />
+    <ClCompile Include="..\Engine\resource\MeshSerialize\OgreMeshSerialize.cpp" />
+    <ClCompile Include="..\Engine\resource\MeshSerialize\SerializeHelper.cpp" />
+    <ClCompile Include="..\Engine\resource\MaterialSerialize\MaterialSerialize.cpp" />
+    <ClCompile Include="..\Engine\resource\SkeletonSerialize\hySkeletonSerialize.cpp" />
+    <ClCompile Include="..\Engine\resource\SkeletonSerialize\OgreSkeletonSerialize.cpp" />
+    <ClCompile Include="..\Engine\scene\Billboard.cpp" />
+    <ClCompile Include="..\Engine\scene\BillboardObjectImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\BoneImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\CameraImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\IBillboardObject.cpp" />
+    <ClCompile Include="..\Engine\scene\IBone.cpp" />
+    <ClCompile Include="..\Engine\scene\ICamera.cpp" />
+    <ClCompile Include="..\Engine\scene\IMeshObject.cpp" />
+    <ClCompile Include="..\Engine\scene\INode.cpp" />
+    <ClCompile Include="..\Engine\scene\IParticleObject.cpp" />
+    <ClCompile Include="..\Engine\scene\ISceneMgr.cpp" />
+    <ClCompile Include="..\Engine\scene\ISceneNode.cpp" />
+    <ClCompile Include="..\Engine\scene\ISceneObject.cpp" />
+    <ClCompile Include="..\Engine\scene\MeshObjectImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\NodeImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\ParticleObjectImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\SceneMgrImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\SceneNodeImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\SceneObjectImpl.cpp" />
+    <ClCompile Include="..\Engine\scene\SubMeshObject.cpp" />
+    <ClCompile Include="..\Engine\animation\Animation.cpp" />
+    <ClCompile Include="..\Engine\animation\AnimationController.cpp" />
+    <ClCompile Include="..\Engine\animation\AnimationEntity.cpp" />
+    <ClCompile Include="..\Engine\animation\AnimationTrackImpl.cpp" />
+    <ClCompile Include="..\Engine\animation\AniObject.cpp" />
+    <ClCompile Include="..\Engine\animation\IAnimationTrack.cpp" />
+    <ClCompile Include="..\Engine\animation\IKeyFrame.cpp" />
+    <ClCompile Include="..\Engine\animation\KeyFrameImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\Particle.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleController.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleFactory.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleRenderableSet.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleTechnique.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\BillboardRenderImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\IBillboardRender.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\IParticleRender.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleRenderImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\IParticleEmitter.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleEmitterImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ColourAffectorImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\IColourAffector.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ILinerForceAffector.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\IParticleAffector.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\LinerForceAffectorImpl.cpp" />
+    <ClCompile Include="..\Engine\particleSystem\ParticleAffectorImpl.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

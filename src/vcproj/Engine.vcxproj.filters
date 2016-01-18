@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{1622562e-a920-4b75-9fb6-f6df693c8956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\base">
+      <UniqueIdentifier>{5963b6e9-69ac-4477-b085-edbda51270a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\renderSystem">
+      <UniqueIdentifier>{ef24378f-08a9-464e-a74c-cd85228b2c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\resources">
+      <UniqueIdentifier>{f1b2c71d-b8cd-4079-828c-6216df2839be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\ui">
+      <UniqueIdentifier>{fe69de6a-975b-40e8-b34a-c528000ae678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\scene">
+      <UniqueIdentifier>{b0e59754-c9f6-4c70-9aca-9cc55d46fbb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\animation">
+      <UniqueIdentifier>{14be57a8-4b39-43d7-a491-a7801026a021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\particleSystem">
+      <UniqueIdentifier>{9b648490-8ecd-40ca-a763-89bc360b281f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\particleSystem\Affectors">
+      <UniqueIdentifier>{d338f725-76c5-4d2e-a2dc-5368355bfa31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\particleSystem\Emitter">
+      <UniqueIdentifier>{fb53b3f6-eedc-427c-9bf6-2565a5196cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\particleSystem\Render">
+      <UniqueIdentifier>{3627640e-f648-4ca4-b771-2c6602017dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{b3ecf6eb-592d-44b9-a007-c2ef0cc5f996}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\renderSystem">
+      <UniqueIdentifier>{316d19d6-8a64-4f4a-bce1-6a5652cf6631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\renderSystem\UiEffect">
+      <UniqueIdentifier>{373e0398-f9fb-4abe-a983-e6b6a5ba6f7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\renderSystem\MaterialSystem">
+      <UniqueIdentifier>{dcf814cd-99e4-46b7-915b-75f21a9ab590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui">
+      <UniqueIdentifier>{189362ca-d324-4e77-8d79-f751ffa0217e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\ui\Impl">
+      <UniqueIdentifier>{8ea6b8dc-66eb-4771-b802-cbde73c86879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\io">
+      <UniqueIdentifier>{0018777b-1245-461e-929a-a6fdafd13644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource">
+      <UniqueIdentifier>{3397c069-97ec-4c3e-b67d-d41e46ba6cd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource\Impl">
+      <UniqueIdentifier>{889344e7-d71f-463d-8fe7-e07f2486511a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource\MeshSerialize">
+      <UniqueIdentifier>{bd4e95bd-4f4b-49d9-abe7-e5e6842a58fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource\MaterialSerialize">
+      <UniqueIdentifier>{93185d3d-7df9-4a2b-8fed-8018c50e2f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\resource\SkeletonSerialize">
+      <UniqueIdentifier>{a0746f55-0675-4252-9b7f-e585084a5b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scene">
+      <UniqueIdentifier>{b8f43cf6-739c-4363-96e1-85b50bde282e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\animation">
+      <UniqueIdentifier>{c428439c-f059-493c-9697-47dcdf996775}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\particleSystem">
+      <UniqueIdentifier>{59292911-28b8-4ea1-9ac5-640cea6cbdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\particleSystem\Render">
+      <UniqueIdentifier>{43237a95-6fb1-417c-8c52-66aa715af058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\particleSystem\Emitter">
+      <UniqueIdentifier>{0baf7973-3ddc-4874-bb02-ff1640d07c2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\particleSystem\Affector">
+      <UniqueIdentifier>{554812ef-0184-41b4-a253-3a377bab6767}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\engine\IPanda.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\AABBOX.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Color.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Config.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Line.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Math.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Matrix44.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Plane.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Quaternion.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Ray.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Rect.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Size.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Struct.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Vector2D.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\base\Vector3D.h">
+      <Filter>include\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\IGraph2D.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\IPass.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderSystem.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderTarget.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\IRenderWindow.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\renderSystem\ITechnique.h">
+      <Filter>include\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IMaterial.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IParticleSys.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IResMesh.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IResMgr.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IResource.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IResSkeleton.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\IResTerrain.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\ITerrainMaterial.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\ITexture.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\resources\ResRefDefine.h">
+      <Filter>include\resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\CtrlDef.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IButton.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ICheckBox.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IComboBox.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IControl.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IDialog.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IFoldPanel.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IFont.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ILabel.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IListBox.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IListView.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IMenu.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IPanel.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IPictureBox.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IProgressBar.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IPropertyGrid.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IRadioButton.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IScrollBar.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ISliderBar.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ITabCtrl.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ITextBox.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IToolBar.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\ITreeView.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IUiInput.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\IUiManager.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\ui\PropertyGridDefine.h">
+      <Filter>include\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\IBillboardObject.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\IBone.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\ICamera.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\IMeshObject.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\INode.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\IParticleObject.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\ISceneMgr.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\ISceneNode.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\scene\ISceneObject.h">
+      <Filter>include\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\animation\IAnimation.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\animation\IAnimationController.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\animation\IAnimationEntity.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\animation\IAnimationTrack.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\animation\IKeyFrame.h">
+      <Filter>include\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleTechnique.h">
+      <Filter>include\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IColourAffector.h">
+      <Filter>include\particleSystem\Affectors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\ILinerForceAffector.h">
+      <Filter>include\particleSystem\Affectors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleAffector.h">
+      <Filter>include\particleSystem\Affectors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleEmitter.h">
+      <Filter>include\particleSystem\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IBillboardRender.h">
+      <Filter>include\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IBoxRender.h">
+      <Filter>include\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IParticleRender.h">
+      <Filter>include\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\engine\particleSystem\IRibbonTrailRender.h">
+      <Filter>include\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\Panda.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\TypeDef.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\Graph2D.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\Graph3D.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\Renderable.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\RenderableSet.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\RenderQueue.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\RenderSystem.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\RenderTargetImpl.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\RenderWindow.h">
+      <Filter>src\renderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\CircleEffect.h">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\Effect2D.h">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\ImageEffect.h">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\UiEffect\RectEffect.h">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\Effect.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\EffectSetPass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\LinePass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\Pass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\PassMgr.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\PostProcessPass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\SknPass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\TechniqueImpl.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\renderSystem\MaterialSystem\TerPass.h">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\Font.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\SliderBarTag.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\uiManager.h">
+      <Filter>src\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ButtonImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\CheckBoxImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ComboBoxImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ControlImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\DialogImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\FoldPageImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\FoldPanelImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\LabelImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ListBoxImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ListBoxItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ListViewImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ListViewItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\MenuImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\MenuItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\PanelImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\PictureBoxImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ProgressBarImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\PropertyGridImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\PropertyGridItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\RadioButtonImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ScrollBarImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\SliderBarImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\TabCtrlImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\TabPageImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\TextBoxImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ToolBarImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ToolBarItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\ToolTipImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\TreeViewImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\ui\TreeViewItemImpl.h">
+      <Filter>src\ui\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\io\Timer.h">
+      <Filter>src\io</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\IndexData.h">
+      <Filter>src\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ResourceMgr.h">
+      <Filter>src\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\SubMesh.h">
+      <Filter>src\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\VertexData.h">
+      <Filter>src\resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MaterialImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ParticleSysImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ResMeshImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ResourceImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ResSkeletonImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\ResTerrainImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\TerrainMaterialImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\TextureImpl.h">
+      <Filter>src\resource\Impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MeshSerialize\hyMeshSerialize.h">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MeshSerialize\MeshSerialize.h">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MeshSerialize\OgreMeshSerialize.h">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MeshSerialize\SerializeHelper.h">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\MaterialSerialize\MaterialSerialize.h">
+      <Filter>src\resource\MaterialSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\hySkeletonSerialize.h">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\OgreSkeletonSerialize.h">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\SkeletonSerialize.h">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\Billboard.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\BillboardObjectImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\BoneImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\CameraImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\MeshObjectImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\NodeImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\ParticleObjectImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\SceneMgrImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\SceneNodeImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\SceneObjectImpl.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\scene\SubMeshObject.h">
+      <Filter>src\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\Animation.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\AnimationController.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\AnimationEntity.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\AnimationTrackImpl.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\AniObject.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\animation\KeyFrameImpl.h">
+      <Filter>src\animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\Particle.h">
+      <Filter>src\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleController.h">
+      <Filter>src\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleFactory.h">
+      <Filter>src\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleRenderableSet.h">
+      <Filter>src\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleTechnique.h">
+      <Filter>src\particleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\BillboardRenderImpl.h">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleRenderImpl.h">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleEmitterImpl.h">
+      <Filter>src\particleSystem\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ColourAffectorImpl.h">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\LinerForceAffectorImpl.h">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Engine\particleSystem\ParticleAffectorImpl.h">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Engine\Panda.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\Static.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\Graph2D.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\Graph3D.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\IRenderTarget.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\Renderable.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\RenderableSet.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\RenderQueue.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\RenderSystem.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\RenderTargetImpl.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\RenderWindow.cpp">
+      <Filter>src\renderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\CircleEffect.cpp">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\Effect2D.cpp">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\ImageEffect.cpp">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\UiEffect\RectEffect.cpp">
+      <Filter>src\renderSystem\UiEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\Effect.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\EffectSetPass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\ITechnique.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\LinePass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\Pass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\PassMgr.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\PostProcessPass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\SknPass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\TechniqueImpl.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\renderSystem\MaterialSystem\TerPass.cpp">
+      <Filter>src\renderSystem\MaterialSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\Font.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IButton.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ICheckBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IComboBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IControl.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IDialog.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IFoldPanel.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ILabel.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IListBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IListView.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IMenu.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IPanel.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IPictureBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IProgressBar.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IPropertyGrid.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IRadioButton.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IScrollBar.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ISliderBar.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ITabCtrl.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ITextBox.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\IToolBar.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ITreeView.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\SliderBarTag.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\uiManager.cpp">
+      <Filter>src\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ButtonImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\CheckBoxImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ComboBoxImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ControlImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\DialogImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\FoldPageImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\FoldPanelImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\LabelImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ListBoxImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ListBoxItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ListViewImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ListViewItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\MenuImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\MenuItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\PanelImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\PictureBoxImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ProgressBarImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\PropertyGridImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\PropertyGridItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\RadioButtonImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ScrollBarImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\SliderBarImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\TabCtrlImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\TabPageImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\TextBoxImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ToolBarImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ToolBarItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\ToolTipImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\TreeViewImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\ui\TreeViewItemImpl.cpp">
+      <Filter>src\ui\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\io\Timer.cpp">
+      <Filter>src\io</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IMaterial.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IndexData.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IParticleSys.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IResMesh.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IResource.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IResSkeleton.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\IResTerrain.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ITerrainMaterial.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ITexture.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ResourceMgr.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\SubMesh.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\VertexData.cpp">
+      <Filter>src\resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\MaterialImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ParticleSysImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ResMeshImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ResourceImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ResSkeletonImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\ResTerrainImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\TerrainMaterialImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\TextureImpl.cpp">
+      <Filter>src\resource\Impl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\MeshSerialize\hyMeshSerialize.cpp">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\MeshSerialize\OgreMeshSerialize.cpp">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\MeshSerialize\SerializeHelper.cpp">
+      <Filter>src\resource\MeshSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\MaterialSerialize\MaterialSerialize.cpp">
+      <Filter>src\resource\MaterialSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\SkeletonSerialize\hySkeletonSerialize.cpp">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\SkeletonSerialize\OgreSkeletonSerialize.cpp">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\Billboard.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\BillboardObjectImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\BoneImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\CameraImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\IBillboardObject.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\IBone.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\ICamera.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\IMeshObject.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\INode.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\IParticleObject.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\ISceneMgr.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\ISceneNode.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\ISceneObject.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\MeshObjectImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\NodeImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\ParticleObjectImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\SceneMgrImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\SceneNodeImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\SceneObjectImpl.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\scene\SubMeshObject.cpp">
+      <Filter>src\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\Animation.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\AnimationController.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\AnimationEntity.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\AnimationTrackImpl.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\AniObject.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\IAnimationTrack.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\IKeyFrame.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\animation\KeyFrameImpl.cpp">
+      <Filter>src\animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\Particle.cpp">
+      <Filter>src\particleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleController.cpp">
+      <Filter>src\particleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleFactory.cpp">
+      <Filter>src\particleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleRenderableSet.cpp">
+      <Filter>src\particleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleTechnique.cpp">
+      <Filter>src\particleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\BillboardRenderImpl.cpp">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\IBillboardRender.cpp">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\IParticleRender.cpp">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleRenderImpl.cpp">
+      <Filter>src\particleSystem\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\IParticleEmitter.cpp">
+      <Filter>src\particleSystem\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleEmitterImpl.cpp">
+      <Filter>src\particleSystem\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ColourAffectorImpl.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\IColourAffector.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ILinerForceAffector.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\IParticleAffector.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\LinerForceAffectorImpl.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\particleSystem\ParticleAffectorImpl.cpp">
+      <Filter>src\particleSystem\Affector</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
