@@ -1,0 +1,22 @@
+struct PS_INPUT
+{
+    float4 Diffuse    : COLOR0;     // vertex diffuse color
+};
+
+struct PS_OUTPUT
+{
+    float4 RGBColor : COLOR;  // Pixel color    
+};
+
+
+//--------------------------------------------------------------------------------------
+// This shader outputs the pixel's color by modulating the texture's
+//       color with diffuse material color
+//--------------------------------------------------------------------------------------
+PS_OUTPUT Main( PS_INPUT In )
+{ 
+    PS_OUTPUT Output;
+    //Output.RGBColor = In.Diffuse;
+    Output.RGBColor = float4(1, 0, 0, 1);
+    return Output;
+}

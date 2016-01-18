@@ -1,0 +1,41 @@
+texture mDiffuseTex;
+
+sampler SamSrcSampler = 
+sampler_state
+{
+    Texture = <mDiffuseTex>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+texture g_txSrcNormal;
+sampler2D SrcNormalSampler = sampler_state
+{
+    Texture = <g_txSrcNormal>;
+    AddressU = Clamp;
+    AddressV = Clamp;
+    MinFilter = Point;
+    MagFilter = Linear;
+    MipFilter = Linear;
+};
+
+float2 PixelKernel[4];
+
+//-----------------------------------------------------------------------------
+// Pixel Shader: PostProcessPS
+// Desc: Performs post-processing effect that detects and highlights edges.
+//-----------------------------------------------------------------------------
+float4 Main(float2 Tex : TEXCOORD0):COLOR0
+{
+	float4 Orig = tex2D( SrcNormalSampler, Tex );
+    float4 Sum = 0;
+    //if( Orig.x != 0 && Orig.y != 0 && Orig.z != 0)
+    {
+		for( int i = 0; i < 4; i++ )
+			Sum += saturate(1 - dot( Orig.xyz, tex2D( SrcNormalSampler, Tex + PixelKernel[i] ).xyz ));
+    }
+    //float4 color = tex2D(SamSrcSampler, Tex);
+    //return Sum + color;
+    return Sum;
+}

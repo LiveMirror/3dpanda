@@ -1,0 +1,40 @@
+float4	mEffectColor = {0.3,0.3,0.3,0.3};
+
+texture mDiffuseTex;
+
+sampler DiffuseTexSampler = 
+sampler_state
+{
+    Texture = <mDiffuseTex>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+//--------------------------------------------------------------------------------------
+// Vertex shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_INPUT
+{
+    float3 TexUV    : TEXCOORD0;     // vertex diffuse color
+};
+
+//--------------------------------------------------------------------------------------
+// Pixel shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_OUTPUT
+{
+    float4 Color		: COLOR0;  // Pixel color
+};
+
+//--------------------------------------------------------------------------------------
+// This shader outputs the pixel's color by modulating the texture's
+//       color with diffuse material color
+//--------------------------------------------------------------------------------------
+PS_OUTPUT Main( PS_INPUT In )
+{ 
+    PS_OUTPUT Output;
+    Output.Color = tex2D(DiffuseTexSampler, In.TexUV);
+    Output.Color *= mEffectColor;
+    return Output;
+}

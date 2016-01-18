@@ -1,0 +1,45 @@
+float3	mLightDir = {-1,-1,-1};
+float3	mLightColor = {1,1,1};
+float3	mEvnColor = {0.3,0.3,0.3};
+
+texture mDiffuseTex;
+
+sampler DiffuseTexSampler = 
+sampler_state
+{
+    Texture = <mDiffuseTex>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+//--------------------------------------------------------------------------------------
+// Vertex shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_INPUT
+{
+    float3 TexUV    : TEXCOORD0;     // vertex diffuse color
+    float3 Normal	: TEXCOORD1;
+};
+
+//--------------------------------------------------------------------------------------
+// Pixel shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_OUTPUT
+{
+    float4 RGBColor		: COLOR0;  // Pixel color
+    float4 NormalColor	: COLOR1;  // Pixel color
+};
+
+
+//--------------------------------------------------------------------------------------
+// This shader outputs the pixel's color by modulating the texture's
+//       color with diffuse material color
+//--------------------------------------------------------------------------------------
+PS_OUTPUT Main( PS_INPUT In )
+{ 
+    PS_OUTPUT Output;
+    Output.RGBColor = tex2D(DiffuseTexSampler, In.TexUV);
+    Output.NormalColor = float4(normalize(In.Normal), 1);
+    return Output;
+}
