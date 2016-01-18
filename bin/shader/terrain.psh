@@ -1,0 +1,148 @@
+texture mDiffuseTex;
+texture mDetailTex;
+
+float	mDiffuseScale;
+int		mTextureNum = 1;
+float3	mLightDir = {-1,-1,-1};
+float3	mLightColor = {1,1,1};
+float3	mEvnColor = {0.8,0.8,0.8};
+
+float	mTexScale1;
+float	mTexScale2;
+float	mTexScale3;
+float	mTexScale4;
+
+sampler DiffuseTexSampler = 
+sampler_state
+{
+    Texture = <mDiffuseTex>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+sampler DetailTexSampler = 
+sampler_state
+{
+    Texture = <mDetailTex>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+texture mTex1;
+sampler Tex1Sampler = 
+sampler_state
+{
+    Texture = <mTex1>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+texture mTex2;
+sampler Tex2Sampler = 
+sampler_state
+{
+    Texture = <mTex2>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+texture mTex3;
+sampler Tex3Sampler = 
+sampler_state
+{
+    Texture = <mTex3>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+texture mTex4;
+sampler Tex4Sampler = 
+sampler_state
+{
+    Texture = <mTex4>;
+    MipFilter = LINEAR;
+    MinFilter = LINEAR;
+    MagFilter = LINEAR;
+};
+
+//--------------------------------------------------------------------------------------
+// Vertex shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_INPUT
+{
+	float4 TextureTens	: COLOR0;		// 各纹理的比重
+    float3 TexUV0		: TEXCOORD0;    // vertex diffuse color
+    float3 Nor			: TEXCOORD1;
+    float3 EyeTo		: TEXCOORD2;
+};
+
+//--------------------------------------------------------------------------------------
+// Pixel shader output structure
+//--------------------------------------------------------------------------------------
+struct PS_OUTPUT
+{
+    float4 RGBColor : COLOR;  // Pixel color
+};
+
+
+//--------------------------------------------------------------------------------------
+// This shader outputs the pixel's color by modulating the texture's
+//       color with diffuse material color
+//--------------------------------------------------------------------------------------
+PS_OUTPUT Main( PS_INPUT In )
+{
+    PS_OUTPUT Output;
+    float w = 1.0;
+    float4 color = float4(0,0,0,0);
+   
+    if(mTextureNum > 0)
+    {
+		 color += tex2D(Tex1Sampler, In.TexUV0 * mTexScale1) * In.TextureTens[0];
+		 w -= In.TextureTens[0];
+    }
+
+    if(mTextureNum > 1)
+    {
+		w -= In.TextureTens[1];
+		color += tex2D(Tex2Sampler, In.TexUV0 * mTexScale2) * In.TextureTens[1];
+    }
+
+    if(mTextureNum > 2)
+    {
+		color += tex2D(Tex3Sampler, In.TexUV0 * mTexScale3) * In.TextureTens[2];
+		w -= In.TextureTens[2];
+    }
+
+    if(mTextureNum > 3)
+    {
+		 color += tex2D(Tex4Sampler, In.TexUV0 * mTexScale4) * In.TextureTens[3];
+		 w -= In.TextureTens[3];
+    }
+    if(w > 0)
+    {
+		color += tex2D(DiffuseTexSampler, In.TexUV0 * mDiffuseScale) * w;
+    }
+    float theta = dot(-mLightDir, normalize(In.Nor));
+    // 反射光反向
+    float3 r = In.Nor * 2 * theta - mLightDir;
+    if(theta < 0)
+    {
+		theta = 0;
+    }
+    float sper = max(dot(normalize(In.EyeTo), normalize(r)), 0);
+    if(sper < 0.8f)
+    {
+		sper = 0.0f;
+    }
+    Output.RGBColor.rgb = mEvnColor * color.rgb + mLightColor * color.rgb * theta;
+    //Output.RGBColor.rgb += mLightColor * color.rgb * sper * 1;
+    //Output.RGBColor.a = color.a;
+    Output.RGBColor.a = 1;
+    
+    return Output;
+}
