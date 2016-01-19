@@ -12,7 +12,7 @@
 #include "Base/Matrix44.h"
 #include "skeletonserialize.h"
 
-namespace shine
+namespace panda
 {
 	class IAnimation;
 	class SklSerialize:public SkeletonSerialize
@@ -27,18 +27,18 @@ namespace shine
 
 	public:
 		// µ¼Èë¹Ç÷À
-		virtual bool	ImportSkeleton(CFileIO& file, ResSkeletonImpl* pSkn);
+		virtual bool	ImportSkeleton(FileStream& file, ResSkeletonImpl* pSkn);
 
 
 	private:
-		void	readBone(CFileIO& file);
+		void	readBone(FileStream& file);
 		void	buildBones(ResSkeletonImpl* pSkn);
 
 
 		void	ImportAnm(const tstring& path, ResSkeletonImpl* pSkn);
 
 		void	_ImportAnm(const tchar* name, ResSkeletonImpl* pSkn);
-		void	_readBoneAnm(CFileIO& file, ResSkeletonImpl* pSkn, IAnimation* pAni, u32 frameNum);
+		void	_readBoneAnm(FileStream& file, ResSkeletonImpl* pSkn, IAnimation* pAni, u32 frameNum);
 
 	private:
 		tstring	mFolderPath;
