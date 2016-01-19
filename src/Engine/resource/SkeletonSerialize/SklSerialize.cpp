@@ -1,14 +1,14 @@
-#include "SklSerialize.h"
 #include "scene/IBone.h"
 #include "../ResSkeletonImpl.h"
-#include "../serializehelper.h"
-#include "resources/ianimationtrack.h"
-#include "resources/ianimation.h"
-#include "resources/ikeyframe.h"
+#include "../MeshSerialize/SerializeHelper.h"
+#include "animation/IAnimationTrack.h"
+#include "animation/IAnimation.h"
+#include "animation/IKeyFrame.h"
+#include "SklSerialize.h"
 
-namespace shine
+namespace panda
 {
-	bool SklSerialize::ImportSkeleton( CFileIO& file, ResSkeletonImpl* pSkn )
+	bool SklSerialize::ImportSkeleton(FileStream& file, ResSkeletonImpl* pSkn)
 	{
 		// 文件类型标识
 		char head[8];
@@ -44,7 +44,7 @@ namespace shine
 		return true;
 	}
 
-	void SklSerialize::readBone( CFileIO& file)
+	void SklSerialize::readBone(FileStream& file)
 	{
 		SklBone bone;
 		// 骨骼名称
@@ -113,7 +113,7 @@ namespace shine
 
 	void SklSerialize::ImportAnm( const tstring& path, ResSkeletonImpl* pSkn )
 	{
-		CFileIO::GetFileFolder(path, mFolderPath);
+		FileStream::GetFileFolder(path, mFolderPath);
 
 		_ImportAnm(_T("idle"), pSkn);
 		_ImportAnm(_T("idle2"), pSkn);
@@ -121,7 +121,7 @@ namespace shine
 
 	void SklSerialize::_ImportAnm(const tchar* name, ResSkeletonImpl* pSkn )
 	{
-		CFileIO file;
+		FileStream file;
 		tstring path = mFolderPath + _T("/");
 		path += name;
 		path += _T(".anm");
@@ -171,7 +171,7 @@ namespace shine
 		}
 	}
 
-	void SklSerialize::_readBoneAnm( CFileIO& file, ResSkeletonImpl* pSkn, IAnimation* pAni, u32 frameNum )
+	void SklSerialize::_readBoneAnm(FileStream& file, ResSkeletonImpl* pSkn, IAnimation* pAni, u32 frameNum)
 	{
 		char name[32];
 		file.Read(name, 32);

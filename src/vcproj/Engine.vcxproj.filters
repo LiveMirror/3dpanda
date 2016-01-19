@@ -648,6 +648,9 @@
     <ClInclude Include="..\Engine\resource\MeshSerialize\sknSerialize.h">
       <Filter>src\resource\MeshSerialize</Filter>
     </ClInclude>
+    <ClInclude Include="..\Engine\resource\SkeletonSerialize\SklSerialize.h">
+      <Filter>src\resource\SkeletonSerialize</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Engine\Panda.cpp">
@@ -1105,6 +1108,9 @@
     </ClCompile>
     <ClCompile Include="..\Engine\resource\MeshSerialize\sknSerialize.cpp">
       <Filter>src\resource\MeshSerialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Engine\resource\SkeletonSerialize\SklSerialize.cpp">
+      <Filter>src\resource\SkeletonSerialize</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
