@@ -180,6 +180,7 @@
     <ClInclude Include="..\..\include\engine\particleSystem\IParticleRender.h" />
     <ClInclude Include="..\..\include\engine\particleSystem\IRibbonTrailRender.h" />
     <ClInclude Include="..\Engine\Panda.h" />
+    <ClInclude Include="..\Engine\resource\MeshSerialize\sknSerialize.h" />
     <ClInclude Include="..\Engine\TypeDef.h" />
     <ClInclude Include="..\Engine\renderSystem\Graph2D.h" />
     <ClInclude Include="..\Engine\renderSystem\Graph3D.h" />
@@ -287,6 +288,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Engine\Panda.cpp" />
+    <ClCompile Include="..\Engine\resource\MeshSerialize\sknSerialize.cpp" />
     <ClCompile Include="..\Engine\Static.cpp" />
     <ClCompile Include="..\Engine\renderSystem\Graph2D.cpp" />
     <ClCompile Include="..\Engine\renderSystem\Graph3D.cpp" />

@@ -11,7 +11,7 @@
 #include <vector>
 #include "MeshSerialize.h"
 
-namespace shine
+namespace panda
 {
 	struct SubMeshInfo
 	{
@@ -28,12 +28,12 @@ namespace shine
 	{
 	public:
 		// 导入模型
-		virtual bool	ImportMesh(CFileIO& file, IResMesh* pMesh);
+		virtual bool	ImportMesh(FileStream& file, IResMesh* pMesh);
 
-		void			ReadSubMeshInfo(CFileIO& file, ResMeshImpl* pMesh);
+		void			ReadSubMeshInfo(FileStream& file, ResMeshImpl* pMesh);
 
-		bool			ReadIndex(CFileIO& file, s32 indexNum, ResMeshImpl* pMesh);
-		bool			ReadVertex(CFileIO& file, s32 vertexNum, ResMeshImpl* pMesh);
+		bool			ReadIndex(FileStream& file, s32 indexNum, ResMeshImpl* pMesh);
+		bool			ReadVertex(FileStream& file, s32 vertexNum, ResMeshImpl* pMesh);
 
 	protected:
 		typedef std::vector<SubMeshInfo>	SubMeshList;
