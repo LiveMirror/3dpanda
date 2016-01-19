@@ -1,14 +1,14 @@
-#include "sknSerialize.h"
 #include "../VertexData.h"
 #include "../ResMeshImpl.h"
 #include "Resources/IResMesh.h"
 #include "../SubMesh.h"
 #include "../ResourceMgr.h"
 #include "../IndexData.h"
+#include "sknSerialize.h"
 
-namespace shine
+namespace panda
 {
-	bool sknSerialize::ImportMesh( CFileIO& file, IResMesh* pMesh )
+	bool sknSerialize::ImportMesh(FileStream& file, IResMesh* pMesh)
 	{
 		s32 header;
 		file.Read(header);
@@ -38,7 +38,7 @@ namespace shine
 		return true;
 	}
 
-	void sknSerialize::ReadSubMeshInfo( CFileIO& file, ResMeshImpl* pImpl)
+	void sknSerialize::ReadSubMeshInfo(FileStream& file, ResMeshImpl* pImpl)
 	{
 		SubMeshInfo info;
 		for(s16 i = 0; i < mSubNum; i++)
@@ -52,19 +52,20 @@ namespace shine
 			mSubMeshs.push_back(info);
 			SubMesh* pMesh = pImpl->CreateSubMesh();
 			pMesh->mUserSharedVertices = false;
-			pMesh->mVertexData = new VertexData(pImpl->mCreater->GetDevice());
+			//pMesh->mVertexData = new VertexData(pImpl->mCreater->GetDevice());
+			pMesh->mVertexData = new VertexData(pImpl->mResMgr->GetDevice());
 			pMesh->mVertexData->mVertexCount = info.vNum;
 			pMesh->mVertexData->AddElement(0, 0, DeclareType::DECLTYPE_FLOAT3, 0, DeclareUsage::DECLUSAGE_POSITION, 0);
 			pMesh->mVertexData->AddElement(0, 12, DeclareType::DECLTYPE_UBYTE4, 0, DeclareUsage::DECLUSAGE_BLENDINDICES, 0);
 			pMesh->mVertexData->AddElement(0, 16, DeclareType::DECLTYPE_FLOAT4, 0, DeclareUsage::DECLUSAGE_BLENDWEIGHT, 0);
 			pMesh->mVertexData->AddElement(0, 32, DeclareType::DECLTYPE_FLOAT3, 0, DeclareUsage::DECLUSAGE_NORMAL, 0);
 			pMesh->mVertexData->AddElement(0, 44, DeclareType::DECLTYPE_FLOAT2, 0, DeclareUsage::DECLUSAGE_TEXCOORD, 0);
-			pMesh->mIndexData = new IndexData(pImpl->mCreater->GetDevice());
+			pMesh->mIndexData = new IndexData(pImpl->mResMgr->GetDevice());
 			pMesh->mIndexData->CreateHardwareBuffer(info.iNum, false);
 		}
 	}
 
-	bool sknSerialize::ReadIndex( CFileIO& file, s32 indexNum, ResMeshImpl* pMesh)
+	bool sknSerialize::ReadIndex(FileStream& file, s32 indexNum, ResMeshImpl* pMesh)
 	{
 		s32 curIndex = 0;
 		for(s16 i = 0; i < mSubNum; i++)
@@ -88,7 +89,7 @@ namespace shine
 		return true;
 	}
 
-	bool sknSerialize::ReadVertex( CFileIO& file, s32 vertexNum, ResMeshImpl* pMesh )
+	bool sknSerialize::ReadVertex(FileStream& file, s32 vertexNum, ResMeshImpl* pMesh)
 	{
 		s32 curIndex = 0;
 		for(s16 i = 0; i < mSubNum; i++)
